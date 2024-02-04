@@ -3,8 +3,7 @@ body {
     background-color: #f8f8f8;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Center align the container */
@@ -13,12 +12,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    position: relative;
+    padding: 20px;
 }
 
 .valentine-gif {
-    width: 300px; /* Set the desired width */
+    width: 80%; /* Set the width to 80% for mobile */
+    max-width: 300px; /* Set the maximum width for larger screens */
     height: auto;
 }
 
@@ -27,26 +26,32 @@ h1 {
     font-size: 24px;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reduce bottom margin for mobile */
+    color: #333; /* Darken text color */
 }
 
 /* Style for buttons */
 #buttons {
     display: flex;
+    flex-direction: column; /* Arrange buttons vertically for mobile */
     justify-content: center;
     align-items: center;
+    margin-top: 20px; /* Add top margin for spacing */
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 24px; /* Increase button padding for better tap targets */
+    font-size: 18px; /* Increase font size for better readability */
     border: none;
-    background-color: #ffcccc; /* Lighter pink */
+    background-color: #ff6666; /* Lighter pink */
     color: #fff;
-    border-radius: 5px;
+    border-radius: 25px; /* Rounded corners */
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 0 10px;
+    margin: 10px 0; /* Add vertical margin for buttons */
+    width: 80%; /* Set width to 80% for mobile */
+    max-width: 250px; /* Limit maximum width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 #noBtn {
@@ -75,6 +80,7 @@ button {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .close {
@@ -90,25 +96,25 @@ button {
     color: #000;
 }
 
+/* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
     .valentine-gif {
-        width: 200px; /* Adjust width for smaller screens */
+        width: 100%; /* Set width to 100% for mobile */
     }
     
     h1 {
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 20px; /* Decrease font size for better fit on small screens */
         margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px; /* Reduce bottom margin for mobile */
     }
     
     button {
-        padding: 8px 16px;
-        font-size: 14px;
-        margin: 0 5px;
+        padding: 10px 20px; /* Decrease button padding for better fit on small screens */
+        font-size: 16px; /* Decrease font size for better fit on small screens */
     }
     
     .popup-content {
-        padding: 10px;
+        padding: 10px; /* Decrease padding for better fit on small screens */
     }
     
     .close {
