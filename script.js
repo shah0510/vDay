@@ -12,7 +12,7 @@ noBtn.addEventListener('click', () => {
     count++;
     switch (count) {
         case 1:
-            noBtn.innerText = "Are you sure shona?";
+            noBtn.innerText = "Are you sure bacha?";
             increaseSize(1.5); // Increase size exponentially by 1.5 times
             break;
         case 2:
